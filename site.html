@@ -1,9 +1,14 @@
+<!DOCTYPE html>
 <html>
+    <head> 
     <h1>CatPhotoApp</h1>
+   
     <main>
-  
-    <img src="https://bit.ly/fcc-relaxing-cat" alt="Photo of a relaxed kitty">
+  <body>
+      
+    <img src="https://bit.ly/fcc-relaxing-cat" alt="Photo of a relaxed kitty"> </head>
       <!--Placeholder text-->
+      <p></p>
       <a href="#footer">Jump to the bottom</a>
       <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
       <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
@@ -22,21 +27,35 @@
                 <p>Intently stare at the same spot poop in the plant pot but kitten is
                 playing with dead mouse. Get video posted to internet for chasing 
                 red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
-            <ul>
+            <div>
+                <ul>
                 <li>milk</li>
                 <li>cheese</li>
                 <li>being nekos</li>
             </ul>
             <form action="/submit-cat-photo">
-            <input type="text" placeholder="What's your favorite neko">
+            <input type="text" required placeholder="What's your favorite neko">
             <button type="submit">this button submits the form</button>
-            </form>
             <ol>
                 <li>Garfield</li>
                 <li>Sylvester</li>
                 <li>Vacuum</li>
             </ol>
+        </div>
+            <label for="indoor">
+                <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
+            </label>
+            <label for="ourdoor">
+                <input id="ourdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+            </label>
+            <p></p>
+            <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked>Loving</label>
+            <label for="agressive"><input id="agressive" value="agressive" type="checkbox" name="personality">Agressive</label>
+            <label for="scared"><input id="scared" value="scared" type="checkbox" name="personality">Scared</label>
+        </form>
+            
+            <p></p>
                 <a href="http://freecatphotoapp.com">cat photos</a>
                 <footer id="footer">Copyright Cat Photo App</footer>
-        </main>
+        </main></body>
 </html>
