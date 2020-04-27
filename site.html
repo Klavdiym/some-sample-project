@@ -5,12 +5,16 @@
 :root{
     --penguin-belly: darkolivegreen;
 }
+a{
+  text-align: center;
+}
 body{
     background-color: blanchedalmond;
     text-decoration-color: cornsilk;
     font-family: 'Courier New', Courier, monospace;
 }
     .text-color-family {
+        font-weight: bold;
         color:rgb(39, 35, 30) !important;
         font-family: Lobster, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -26,8 +30,14 @@ body{
 }
 .larger-image{
     width: 500px;
+    height: 500px;
+}
+.fat-text{
+  font-weight: bold;
+  font-size: 50px;
 }
     h1{
+        text-align: justify;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 30px;
         color: blue;
@@ -66,7 +76,7 @@ margin:10px 0px 10px 0px;
       <p style="background-color: #F0F;" padding: 3px;>
         
       </p>
-      <a href="#footer">Jump to the bottom</a>
+      <a href="#footer" >Jump to the bottom</a>
       <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
       <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
         stretching attack your ankles chase the red dot, hairball
@@ -77,7 +87,7 @@ margin:10px 0px 10px 0px;
             <p class="text-color-family"><a href="#">Meow</a> loved it, hated it, loved it, hated it yet spill 
                 litter box, scratch at owner, destroy all furniture, 
                 especially couch or lay on arms while you're using the 
-                keyboard. Missing until dinner time toy mouse squeak roll 
+                keyboard. <span class="fat-text">Missing</span> until dinner time toy mouse squeak roll 
                 over. With tail in the air lounge in doorway. Man running 
                 from cops stops to pet cats, goes to jail.</p>
                 <a href="#"><img src="https://bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
@@ -113,11 +123,11 @@ margin:10px 0px 10px 0px;
                 <style>
                     .penguin {
                   
-                      /* Only change code below this line */
+                     
                       --penguin-skin: gray;
                       --penguin-belly: white;
                       --penguin-beak: orange;
-                      /* Only change code above this line */
+                      
                   
                       position: relative;
                       margin: auto;
@@ -310,7 +320,6 @@ margin:10px 0px 10px 0px;
                       <div class="beak-bottom"></div>
                     </div>
                   </div>
-
                   <style>
                     :root {
                       --penguin-size1: 300px;
@@ -398,10 +407,10 @@ margin:10px 0px 10px 0px;
                   
                     @keyframes wave {
                         10% {
-                          transform: rotate(10deg);
+                          transform: rotate(110deg);
                         }
                         20% {
-                          transform: rotate(90deg);
+                          transform: rotate(130deg);
                         }
                         30% {
                           transform: rotate(110deg);
