@@ -6,6 +6,7 @@
   background: linear-gradient(35deg,#CCFFFF,  rgb(238, 187, 187));
 }
 a{
+  position: relative;
   margin: auto; 
 }
 body{
@@ -31,6 +32,28 @@ button:hover{
 }
 #jump:hover{
   background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+  animation: move 100ms   infinite  ;
+}
+@keyframes move {
+  0% {
+    
+    top: 1px;
+  }
+  50% {
+    
+    right: 1px;
+  }
+  75% {
+    
+    left: 1px;
+  }
+  100%{
+    
+    bottom: 1px;
+  }
+
+
+  
 }
 p{
   z-index: 10;
@@ -134,11 +157,71 @@ header{
       opacity: 1;
       transform: scale(2);
     }
+
+    .heart {
+                    position: absolute;
+                    margin: auto;
+                    left: 60px;
+                    top: 130px;
+                    
+                    background-color: red;
+                    height: 50px;
+                    width: 50px;
+                    opacity: 0.3;
+                    transform: rotate(-45deg);
+                    animation-name: changeSize;
+                    animation-iteration-count:infinite;
+                    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+                    rotate: -45Deg;
+                
+                  }
+                  .heart:after {
+                    background-color: red;
+                    content: "";
+                    border-radius: 50%;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 0px;
+                    left: 25px;
+                    
+                  }
+                  .heart:before {
+                    background-color: red;
+                    content: "";
+                    border-radius: 50%;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: -25px;
+                    left: 0px;
+                  }
+                  .heart{
+-webkit-animation: zoom 1s;
+-moz-animation: zoom 1s;
+-ms-animation: zoom 1s;
+animation: zoom 1s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+}
+@-webkit-keyframes zoom{
+from { -webkit-transform: scale(0.8) }
+to { -webkit-transform: scale(1) }
+}
+@-moz-keyframes zoom{
+from { -moz-transform: scale(0.8) }
+to { -moz-transform: scale(1)}
+}
+@keyframes zoom{
+from {transform:scale(0.8)}
+to {transform:scale(1)}
+}
 </style>
 <html>
     <head> 
     <header>Cat Photo App by Lordicode</header>
     <h1>Cat Photo App by Lordicode</h1>
+    
    </head>
     <main>
 
@@ -621,7 +704,7 @@ header{
                   </div>
                 <footer id="footer">Copyright Lordicode (Klavdii Maksenkov)</footer>
                 <style>
-                  .heart {
+                  /*.heart {
                     position: absolute;
                     opacity: 0.2;
                     margin: auto;
@@ -653,23 +736,31 @@ header{
                     height: 50px;
                     top: -25px;
                     left: 0px;
-                  }
+                  }*/
                   #footer{
                     animation: opacity 4s  1s;
                     animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
                   }
                   @keyframes opacity {
                     0%{
                       opacity: 0.2;
                     }
                     50%{
-                      opacity: 1;
+                      opacity: 0.6;
                     }
                     100%{
                       opacity: 0.2;
                     }
                   }
                 </style>
+                <style>
+                  
+                
+
+                </style>
+                <div class="back"></div>
                 <div class="heart"></div>
+                <!--<div class="heart"></div>-->
               </body>
 </html>
