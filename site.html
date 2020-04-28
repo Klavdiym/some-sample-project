@@ -3,30 +3,55 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 :root{
-    --penguin-belly: darkolivegreen;
+  background: linear-gradient(35deg,#CCFFFF,  rgb(238, 187, 187));
 }
 a{
-  text-align: center;
-}
-p{
-  background-color: rgba(45, 45, 45, 0.1);
+  margin: auto; 
 }
 body{
-    background-color: blanchedalmond;
-    text-decoration-color: cornsilk;
-    font-family: 'Courier New', Courier, monospace;
+  height: 100%; margin: 0;
 }
+button:hover{
+  animation: color 4s   infinite  ;
+}
+@keyframes color {
+  0%{
+    background-color: red;
+    font-size: 30px;
+  }
+  50%{
+    background-color: green;
+    font-size: 30px;
+  }
+  100%{
+    background-color: blue;
+    font-size: 30px;
+      }
+  
+}
+#jump:hover{
+  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+}
+p{
+  z-index: 10;
+  background-color: rgba(45, 45, 45, 0.1);
+}
+
     .text-color-family {
         font-weight: bold;
         color:rgb(39, 35, 30) !important;
         font-family: Lobster, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    ul, ol{
+    label{
+        text-decoration: double !important;
         font-family: Bangers, 'Courier New', Courier, monospace;
+    }
+    .penguin:hover{
+      opacity: 0.1;
     }
 
 .thin-border{
-    border-color: #2C5F92;
+    border-color: hsl(180, 100%, 50%);
     border-width: 5px;
     border-style: solid;
     border-radius: 50%;
@@ -34,56 +59,97 @@ body{
 .larger-image{
     width: 500px;
     height: 500px;
+    opacity: 0.9;
+    position: relative; display: inline-block;
+    right: -30%;
+}
+.larger-image:hover{
+  transform: skewX(5deg);
 }
 .fat-text{
   font-weight: bold;
-  font-size: 50px;
+  font-size: 20px;
   text-decoration: underline;
   font-style: italic;
+  text-transform: uppercase;
+  line-height: 12px;
 }
-    h1{
+header{
+  position: fixed;
+      top: 0px;
+      left: 5px;
+      opacity: 0.1;
         text-align: justify;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 30px;
-        color: blue;
+        font-weight: 400;
+        color: black;
         padding: 1.5em;
         margin: 20px 10px 10px 20px;
+        transition: 0.2s;
+        z-index: 1;
+}
+    h1{
+      position: relative;
+        text-align: justify;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: black;
+        padding: 1.5em;
+        margin: 20px 10px 10px 20px;
+        transition: 0.2s;
+        z-index: 2;
     }
 
     .div-background{
-        background-color: darkgoldenrod;
-        margin: 20px;
+      background: repeating-linear-gradient(45deg, #a83252 0px,#8c344c 40px, #592b37 80px);
+        margin-left: 0px;
         padding: 5px 10px 5px 10px;
     }
-    #submit-cat-photos{
-        background-color: var(--penguin-belly);
-        margin: 15px;
-        padding: 15px;
+    
+    #submit-cat-photos:hover{
+      color: chartreuse;
     }
     [type='radio']{
       margin:10px 0px 10px 0px;
     }
-    #indoors{
-        color: crimson;
-    }
+    
     #footer{
-      text-decoration: line-through;
+      text-emphasis: circle;
+      opacity: 0.2;
+      text-align: center;
+      color: rgb(230, 15, 15);
+      font-weight: bold;
+      text-decoration: dotted;
+      background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+    }
+    #footer:hover{
+      opacity: 1;
+      transform: scale(2);
     }
 </style>
 <html>
     <head> 
-    <h1>CatPhotoApp</h1>
-   
+    <header>Cat Photo App by Lordicode</header>
+    <h1>Cat Photo App by Lordicode</h1>
+   </head>
     <main>
 
   <body>
       
     <img src="https://bit.ly/fcc-relaxing-cat" class="larger-image thin-border" alt="Photo of a relaxed kitty"> </head>
-      <!--Placeholder text-->
+      
       <p style="background-color: #F0F;" padding: 3px;>
         
       </p>
-      <a href="#footer" >Jump to the bottom</a>
+      <a href="#footer"  id="jump">Jump to the bottom</a>
       <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
       <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
         stretching attack your ankles chase the red dot, hairball
@@ -91,7 +157,7 @@ body{
         <p class="text-color-family">Purr jump eat the grass rip the couch 
             scratched sunbathe, shed everywhere <u>rip</u> the couch 
             sleep in the sink fluffy fur catnip scratched.</p>
-            <p class="text-color-family"><a href="#">Meow</a> loved it, hated it, loved it, hated it yet spill 
+            <p class="text-color-family" ><a href="#">Meow</a> loved it, hated it, loved it, hated it yet spill 
                 litter box, scratch at owner, destroy all furniture, 
                 especially couch or lay on arms while you're using the 
                 keyboard. <span class="fat-text">Missing</span> until dinner time toy mouse squeak roll 
@@ -110,6 +176,7 @@ body{
             <form id="submit-cat-photos" action="/submit-cat-photo">
             <input type="text" required placeholder="What's your favorite neko">
             <button type="submit">Submit</button>
+            <p></p>
             <ol>
                 <li>Garfield</li>
                 <li>Sylvester</li>
@@ -118,32 +185,29 @@ body{
 
         </div>
         <hr>
-            <label for="indoor">
+            <label for="indoor" id="indoor">
                 <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
             </label>
-            <label for="ourdoor">
-                <input id="ourdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+            <label for="outdoor">
+                <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
             </label>
-            <p></p>
+            
             <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked>Loving</label>
             <label for="agressive"><input id="agressive" value="agressive" type="checkbox" name="personality">Agressive</label>
             <label for="scared"><input id="scared" value="scared" type="checkbox" name="personality">Scared</label>
-        </form>
+        </main>
                 <style>
                     .penguin {
-                  
-                      box-shadow: 10px 5px 15px black;
+                      float: left;
+                      box-shadow: 10px 5px 10px black;
                       --penguin-skin: gray;
                       --penguin-belly: white;
-                      --penguin-beak: orange;
-                      
-                  
+                      --penguin-beak: orange;            
                       position: relative;
-                      margin: auto;
-                      display: block;
-                      margin-top: 5%;
-                      width: 300px;
-                      height: 300px;
+                      margin-top: 10%;
+                      margin-bottom: 0px;
+                      width: 220px;
+                      height: 220px;
                     }
                   
                     .penguin-top {
@@ -298,9 +362,7 @@ body{
                       border-radius: 50%;
                     }
                   
-                    body {
-                      background:#c6faf1;
-                    }
+                    
                   
                     .penguin * {
                       position: absolute;
@@ -329,33 +391,31 @@ body{
                       <div class="beak-bottom"></div>
                     </div>
                   </div>
-                  <style>
+                <a href="http://freecatphotoapp.com">cat photos</a>
+            <style>
                     :root {
-                      --penguin-size1: 300px;
+                      margin-right: 0px;
+                      margin-bottom: 0px;
+                      --penguin-size1: 200px;
                       --penguin-skin1: gray;
                       --penguin-belly1: white;
                       --penguin-beak1: orange;
                     }
                   
-                    @media (max-width: 350px) {
-                      :root {
-                       --penguin-size1:200px;
-                       --penguin-skin1: black;
-                      }
-                    }
                   
                     .penguin1 {
+                      
+                      float: right;
                       box-shadow: 10px -10px  rgba(0,0,0,0.6);
-  -moz-box-shadow: 10px -10px  rgba(0,0,0,0.6);
-  -webkit-box-shadow: 10px -10px  rgba(0,0,0,0.6);
-  -o-box-shadow: 10px -10px  rgba(10,0,0,0.6);
-  border-radius: 100px;
+                      -moz-box-shadow: 10px -10px  rgba(0,0,0,0.6);
+                      -webkit-box-shadow: 10px -10px  rgba(0,0,0,0.6);
+                      -o-box-shadow: 10px -10px  rgba(10,0,0,0.6);
+                      border-radius: 100px;
                       position: relative;
-                      margin: auto;
+                      
                       display: block;
-                      margin-top: 5%;
-                      width: var(--penguin-size, 300px);
-                      height: var(--penguin-size, 300px);
+                      width: var(--penguin-size, 200px);
+                      height: var(--penguin-size, 200px);
                     }
                   
                     .right-cheek1 {
@@ -530,12 +590,10 @@ body{
                       border-radius: 50%;
                     }
                   
-                    body {
-                      background:#c6faf1;
-                    }
-                  
                     .penguin1 * {
                       position: absolute;
+                      right: 0;
+                      bottom: 0;
                     }
                   </style>
                   <div class="penguin1">
@@ -561,9 +619,57 @@ body{
                       <div class="beak-bottom1"></div>
                     </div>
                   </div>
-            <p></p>
-                <a href="http://freecatphotoapp.com">cat photos</a>
-            
-                <footer id="footer">Copyright Cat Photo App</footer>
-        </main></body>
+                <footer id="footer">Copyright Lordicode (Klavdii Maksenkov)</footer>
+                <style>
+                  .heart {
+                    position: absolute;
+                    opacity: 0.2;
+                    margin: auto;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: pink;
+                    height: 50px;
+                    width: 50px;
+                    transform: rotate(-45deg);
+                  }
+                  .heart::after {
+                    background-color: pink;
+                    content: "";
+                    border-radius: 50%;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 0px;
+                    left: 25px;
+                  }
+                  .heart::before {
+                    content: "";
+                    background-color: pink;
+                    border-radius: 50%;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: -25px;
+                    left: 0px;
+                  }
+                  #footer{
+                    animation: opacity 4s  1s;
+                    animation-iteration-count: infinite;
+                  }
+                  @keyframes opacity {
+                    0%{
+                      opacity: 0.2;
+                    }
+                    50%{
+                      opacity: 1;
+                    }
+                    100%{
+                      opacity: 0.2;
+                    }
+                  }
+                </style>
+                <div class="heart"></div>
+              </body>
 </html>
