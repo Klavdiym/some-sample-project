@@ -8,6 +8,9 @@
 a{
   text-align: center;
 }
+p{
+  background-color: rgba(45, 45, 45, 0.1);
+}
 body{
     background-color: blanchedalmond;
     text-decoration-color: cornsilk;
@@ -35,6 +38,8 @@ body{
 .fat-text{
   font-weight: bold;
   font-size: 50px;
+  text-decoration: underline;
+  font-style: italic;
 }
     h1{
         text-align: justify;
@@ -52,15 +57,17 @@ body{
     }
     #submit-cat-photos{
         background-color: var(--penguin-belly);
-        margin: -15px;
-        padding-bottom: 5px;
-
+        margin: 15px;
+        padding: 15px;
     }
     [type='radio']{
-margin:10px 0px 10px 0px;
+      margin:10px 0px 10px 0px;
     }
     #indoors{
         color: crimson;
+    }
+    #footer{
+      text-decoration: line-through;
     }
 </style>
 <html>
@@ -80,9 +87,9 @@ margin:10px 0px 10px 0px;
       <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
       <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
         stretching attack your ankles chase the red dot, hairball
-        run catnip eat the grass sniff.</p>
+        run catnip eat the <strong>grass</strong> sniff.</p>
         <p class="text-color-family">Purr jump eat the grass rip the couch 
-            scratched sunbathe, shed everywhere rip the couch 
+            scratched sunbathe, shed everywhere <u>rip</u> the couch 
             sleep in the sink fluffy fur catnip scratched.</p>
             <p class="text-color-family"><a href="#">Meow</a> loved it, hated it, loved it, hated it yet spill 
                 litter box, scratch at owner, destroy all furniture, 
@@ -92,7 +99,7 @@ margin:10px 0px 10px 0px;
                 from cops stops to pet cats, goes to jail.</p>
                 <a href="#"><img src="https://bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
                 <p>Intently stare at the same spot poop in the plant pot but kitten is
-                playing with dead mouse. Get video posted to internet for chasing 
+                playing with dead mouse. Get <em>video</em> posted to internet for chasing 
                 red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
             <div class="div-background">
                 <ul>
@@ -108,7 +115,9 @@ margin:10px 0px 10px 0px;
                 <li>Sylvester</li>
                 <li>Vacuum</li>
             </ol>
+
         </div>
+        <hr>
             <label for="indoor">
                 <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
             </label>
@@ -123,7 +132,7 @@ margin:10px 0px 10px 0px;
                 <style>
                     .penguin {
                   
-                     
+                      box-shadow: 10px 5px 15px black;
                       --penguin-skin: gray;
                       --penguin-belly: white;
                       --penguin-beak: orange;
@@ -336,6 +345,11 @@ margin:10px 0px 10px 0px;
                     }
                   
                     .penguin1 {
+                      box-shadow: 10px -10px  rgba(0,0,0,0.6);
+  -moz-box-shadow: 10px -10px  rgba(0,0,0,0.6);
+  -webkit-box-shadow: 10px -10px  rgba(0,0,0,0.6);
+  -o-box-shadow: 10px -10px  rgba(10,0,0,0.6);
+  border-radius: 100px;
                       position: relative;
                       margin: auto;
                       display: block;
