@@ -51,8 +51,6 @@ button:hover{
     
     bottom: 1px;
   }
-
-
   
 }
 p{
@@ -157,7 +155,7 @@ header{
       opacity: 1;
       transform: scale(2);
     }
-
+    
     .heart {
                     position: absolute;
                     margin: auto;
@@ -216,71 +214,8 @@ to { -moz-transform: scale(1)}
 from {transform:scale(0.8)}
 to {transform:scale(1)}
 }
-</style>
-<html>
-    <head> 
-    <header>Cat Photo App by Lordicode</header>
-    <h1>Cat Photo App by Lordicode</h1>
-    
-   </head>
-    <main>
 
-  <body>
-      
-    <img src="https://bit.ly/fcc-relaxing-cat" class="larger-image thin-border" alt="Photo of a relaxed kitty"> </head>
-      
-      <p style="background-color: #F0F;" padding: 3px;>
-        
-      </p>
-      <a href="#footer"  id="jump">Jump to the bottom</a>
-      <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
-      <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
-        stretching attack your ankles chase the red dot, hairball
-        run catnip eat the <strong>grass</strong> sniff.</p>
-        <p class="text-color-family">Purr jump eat the grass rip the couch 
-            scratched sunbathe, shed everywhere <u>rip</u> the couch 
-            sleep in the sink fluffy fur catnip scratched.</p>
-            <p class="text-color-family" ><a href="#">Meow</a> loved it, hated it, loved it, hated it yet spill 
-                litter box, scratch at owner, destroy all furniture, 
-                especially couch or lay on arms while you're using the 
-                keyboard. <span class="fat-text">Missing</span> until dinner time toy mouse squeak roll 
-                over. With tail in the air lounge in doorway. Man running 
-                from cops stops to pet cats, goes to jail.</p>
-                <a href="#"><img src="https://bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
-                <p>Intently stare at the same spot poop in the plant pot but kitten is
-                playing with dead mouse. Get <em>video</em> posted to internet for chasing 
-                red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
-            <div class="div-background">
-                <ul>
-                <li>milk</li>
-                <li>cheese</li>
-                <li>being nekos</li>
-            </ul>
-            <form id="submit-cat-photos" action="/submit-cat-photo">
-            <input type="text" required placeholder="What's your favorite neko">
-            <button type="submit">Submit</button>
-            <p></p>
-            <ol>
-                <li>Garfield</li>
-                <li>Sylvester</li>
-                <li>Vacuum</li>
-            </ol>
-
-        </div>
-        <hr>
-            <label for="indoor" id="indoor">
-                <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
-            </label>
-            <label for="outdoor">
-                <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
-            </label>
-            
-            <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked>Loving</label>
-            <label for="agressive"><input id="agressive" value="agressive" type="checkbox" name="personality">Agressive</label>
-            <label for="scared"><input id="scared" value="scared" type="checkbox" name="personality">Scared</label>
-        </main>
-                <style>
-                    .penguin {
+            .penguin {
                       float: left;
                       box-shadow: 10px 5px 10px black;
                       --penguin-skin: gray;
@@ -450,33 +385,43 @@ to {transform:scale(1)}
                     .penguin * {
                       position: absolute;
                     }
-                  </style>
-                  <div class="penguin">
-                    <div class="penguin-bottom">
-                      <div class="right-hand"></div>
-                      <div class="left-hand"></div>
-                      <div class="right-feet"></div>
-                      <div class="left-feet"></div>
-                    </div>
-                    <div class="penguin-top">
-                      <div class="right-cheek"></div>
-                      <div class="left-cheek"></div>
-                      <div class="belly"></div>
-                      <div class="right-eye">
-                        <div class="sparkle"></div>
-                      </div>
-                      <div class="left-eye">
-                        <div class="sparkle"></div>
-                      </div>
-                      <div class="blush-right"></div>
-                      <div class="blush-left"></div>
-                      <div class="beak-top"></div>
-                      <div class="beak-bottom"></div>
-                    </div>
-                  </div>
-                <a href="http://freecatphotoapp.com">cat photos</a>
-            <style>
-                    :root {
+                    .balls {
+    border-radius: 50%;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #red {
+    background: red;
+    left: 25%;
+    position: relative;
+    top: -10px;
+    animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6);;
+  }
+  #blue {
+    background: blue;
+    left: 50%;
+    animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6);
+    /*top: 700px;*/
+    
+  }
+  #green {
+    background: green;
+    left: 75%;
+    animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6);
+    top: -6px;
+  }
+
+  @keyframes jump {
+    50% {
+      top: 10%;
+    }
+  }
+  :root {
                       margin-right: 0px;
                       margin-bottom: 0px;
                       --penguin-size1: 200px;
@@ -678,7 +623,115 @@ to {transform:scale(1)}
                       right: 0;
                       bottom: 0;
                     }
-                  </style>
+                    #footer{
+                    animation: opacity 4s  1s;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                  }
+                  @keyframes opacity {
+                    0%{
+                      opacity: 0.2;
+                    }
+                    50%{
+                      opacity: 0.6;
+                    }
+                    100%{
+                      opacity: 0.2;
+                    }
+                  }
+</style>
+<html>
+    <head> 
+    <header>Cat Photo App by Lordicode</header>
+    <h1>Cat Photo App by Lordicode</h1>
+    
+   </head>
+    <main>
+
+  <body>
+      
+    <img src="https://bit.ly/fcc-relaxing-cat" class="larger-image thin-border" alt="Photo of a relaxed kitty"> </head>
+      
+      <p style="background-color: #F0F;" padding: 3px;>
+        
+      </p>
+      <a href="#footer"  id="jump">Jump to the bottom</a>
+      <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
+      <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
+        stretching attack your ankles chase the red dot, hairball
+        run catnip eat the <strong>grass</strong> sniff.</p>
+        <p class="text-color-family">Purr jump eat the grass rip the couch 
+            scratched sunbathe, shed everywhere <u>rip</u> the couch 
+            sleep in the sink fluffy fur catnip scratched.</p>
+            <p class="text-color-family" ><a href="#">Meow</a> loved it, hated it, loved it, hated it yet spill 
+                litter box, scratch at owner, destroy all furniture, 
+                especially couch or lay on arms while you're using the 
+                keyboard. <span class="fat-text">Missing</span> until dinner time toy mouse squeak roll 
+                over. With tail in the air lounge in doorway. Man running 
+                from cops stops to pet cats, goes to jail.</p>
+                <a href="#"><img src="https://bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
+                <p>Intently stare at the same spot poop in the plant pot but kitten is
+                playing with dead mouse. Get <em>video</em> posted to internet for chasing 
+                red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
+            <div class="div-background">
+                <ul>
+                <li>milk</li>
+                <li>cheese</li>
+                <li>being nekos</li>
+            </ul>
+            <form id="submit-cat-photos" action="/submit-cat-photo">
+            <input type="text" required placeholder="What's your favorite neko">
+            <button type="submit">Submit</button>
+            <p></p>
+            <ol>
+                <li>Garfield</li>
+                <li>Sylvester</li>
+                <li>Vacuum</li>
+            </ol>
+
+        </div>
+        <hr>
+            <label for="indoor" id="indoor">
+                <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
+            </label>
+            <label for="outdoor">
+                <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+            </label>
+          <div></div>
+            <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked>Loving</label>
+            <label for="agressive"><input id="agressive" value="agressive" type="checkbox" name="personality">Agressive</label>
+            <label for="scared"><input id="scared" value="scared" type="checkbox" name="personality">Scared</label>
+            
+            <a href="http://freecatphotoapp.com">Cat photos</a>
+                <footer id="footer">Copyright Lordicode (Klavdii Maksenkov)</footer>
+                
+          </main>
+               
+                  <div class="penguin">
+                    <div class="penguin-bottom">
+                      <div class="right-hand"></div>
+                      <div class="left-hand"></div>
+                      <div class="right-feet"></div>
+                      <div class="left-feet"></div>
+                    </div>
+                    <div class="penguin-top">
+                      <div class="right-cheek"></div>
+                      <div class="left-cheek"></div>
+                      <div class="belly"></div>
+                      <div class="right-eye">
+                        <div class="sparkle"></div>
+                      </div>
+                      <div class="left-eye">
+                        <div class="sparkle"></div>
+                      </div>
+                      <div class="blush-right"></div>
+                      <div class="blush-left"></div>
+                      <div class="beak-top"></div>
+                      <div class="beak-bottom"></div>
+                    </div>
+                  </div>
+                
+            
                   <div class="penguin1">
                     <div class="penguin-bottom1">
                       <div class="right-hand1"></div>
@@ -702,65 +755,13 @@ to {transform:scale(1)}
                       <div class="beak-bottom1"></div>
                     </div>
                   </div>
-                <footer id="footer">Copyright Lordicode (Klavdii Maksenkov)</footer>
-                <style>
-                  /*.heart {
-                    position: absolute;
-                    opacity: 0.2;
-                    margin: auto;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    background-color: pink;
-                    height: 50px;
-                    width: 50px;
-                    transform: rotate(-45deg);
-                  }
-                  .heart::after {
-                    background-color: pink;
-                    content: "";
-                    border-radius: 50%;
-                    position: absolute;
-                    width: 50px;
-                    height: 50px;
-                    top: 0px;
-                    left: 25px;
-                  }
-                  .heart::before {
-                    content: "";
-                    background-color: pink;
-                    border-radius: 50%;
-                    position: absolute;
-                    width: 50px;
-                    height: 50px;
-                    top: -25px;
-                    left: 0px;
-                  }*/
-                  #footer{
-                    animation: opacity 4s  1s;
-                    animation-iteration-count: infinite;
-                    animation-fill-mode: forwards;
-                  }
-                  @keyframes opacity {
-                    0%{
-                      opacity: 0.2;
-                    }
-                    50%{
-                      opacity: 0.6;
-                    }
-                    100%{
-                      opacity: 0.2;
-                    }
-                  }
-                </style>
-                <style>
-                  
-                
-
-                </style>
-                <div class="back"></div>
-                <div class="heart"></div>
-                <!--<div class="heart"></div>-->
+                     <div class="back"></div>
+                     <div class="heart"></div>
+                     <div class="balls" id="red"></div>
+                     <div class="wrapper">
+                      <div class="balls" id="blue"></div>
+                     <div class="balls" id="green"></div>
+                  </div>
+                     
               </body>
 </html>
