@@ -30,10 +30,24 @@ button:hover{
       }
   
 }
+#retina{
+  height: 200px !important; 
+  width: 200px !important;
+}
 #jump:hover{
   background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
   animation: move 100ms   infinite  ;
 }
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+  }
+
 @keyframes move {
   0% {
     
@@ -51,7 +65,24 @@ button:hover{
     
     bottom: 1px;
   }
-  
+  img{
+    max-width: 100%;
+  height: auto;
+  }
+}
+@media ( max-height: 800px )
+{
+   p{
+     font-size: 10px;
+   }
+   h1 h2 h3{
+    font-size: 10px;
+   }
+  img{
+    width: 30px;
+    height: 30px;
+  }
+   
 }
 p{
   z-index: 10;
@@ -78,8 +109,8 @@ p{
     border-radius: 50%;
 }
 .larger-image{
-    width: 500px;
-    height: 500px;
+    width: 30vw;
+    height: 30vw;
     opacity: 0.9;
     position: relative; display: inline-block;
     right: -30%;
@@ -642,22 +673,24 @@ to {transform:scale(1)}
 </style>
 <html>
     <head> 
-    <header>Cat Photo App by Lordicode</header>
+    <p>Cat Photo App by Lordicode</p>
     <h1>Cat Photo App by Lordicode</h1>
     
    </head>
-    <main>
+
 
   <body>
-      
+      <header>Nekos are life</header>
     <img src="https://bit.ly/fcc-relaxing-cat" class="larger-image thin-border" alt="Photo of a relaxed kitty"> </head>
       
       <p style="background-color: #F0F;" padding: 3px;>
         
       </p>
       <a href="#footer"  id="jump">Jump to the bottom</a>
+      
       <p>View more <a href="http://freecatphotoapp.com" target="_blank">cat photos</a></p>
-      <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
+          <main>
+            <p class="text-color-family">Kitty ipsum dolor sit amet, shed everywhere shed everywhere 
         stretching attack your ankles chase the red dot, hairball
         run catnip eat the <strong>grass</strong> sniff.</p>
         <p class="text-color-family">Purr jump eat the grass rip the couch 
@@ -669,11 +702,19 @@ to {transform:scale(1)}
                 keyboard. <span class="fat-text">Missing</span> until dinner time toy mouse squeak roll 
                 over. With tail in the air lounge in doorway. Man running 
                 from cops stops to pet cats, goes to jail.</p>
-                <a href="#"><img src="https://bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
+                <article>Hire me
+                <section>Because I know CSS and HTML</section>And because I know other stuff</section></article>
+                <figure>
+                <a href="#"><img id="retina" src="https://bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
+              <br>
+              <figcaption>Three cats are running. It is very meaningful.</figcaption>
+              </figure>
                 <p>Intently stare at the same spot poop in the plant pot but kitten is
                 playing with dead mouse. Get <em>video</em> posted to internet for chasing 
                 red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
-            <div class="div-background">
+          </main>  
+          <nav> 
+                <div class="div-background">
                 <ul>
                 <li>milk</li>
                 <li>cheese</li>
@@ -689,23 +730,80 @@ to {transform:scale(1)}
                 <li>Vacuum</li>
             </ol>
 
-        </div>
+        </div></nav> 
+        <section>
+          <h3 tabindex="0">Type of neko and body type</h3>
+          
+          <figure>          
+          <p class="sr-only">[Stacked bar chart]</p>
+<br />
+<figcaption>3 body types and possible corresponding character types</figcaption>
+
+<table>
+  <caption>Type of character</caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th scope="col">Kuudere &amp; Cooldere</th>
+          <th scope="col">Tsundere</th>
+          <th scope="col">Deredere</th>
+          <th scope="col">Bakadere</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Voluptuos</th>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <th scope="row">Flat or loli</th>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10007;</td>
+        </tr>
+        <tr>
+          <th scope="row">Medium</th>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>50/50</td>
+          <td>&#10007;</td>
+        </tr>
+      </tbody>
+</table>
+        </section>
         <hr>
-            <label for="indoor" id="indoor">
+        <form>   
+          <fieldset>
+            <legend>Is your cat and indoor type or outdoor type?</legend>
+              <label for="indoor" id="indoor">
                 <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
-            </label>
-            <label for="outdoor">
+            
+              <label for="outdoor">
                 <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
-            </label>
+            </fieldset>
+            <label for="input1">When was you cat born</label>
+            <input type="date" id="input1" name="input1">
+            
           <div></div>
             <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked>Loving</label>
             <label for="agressive"><input id="agressive" value="agressive" type="checkbox" name="personality">Agressive</label>
             <label for="scared"><input id="scared" value="scared" type="checkbox" name="personality">Scared</label>
-            
-            <a href="http://freecatphotoapp.com">Cat photos</a>
-                <footer id="footer">Copyright Lordicode (Klavdii Maksenkov)</footer>
-                
-          </main>
+          <p>My cat was born <time datetime="2013-02-13"> on Februrary 13<sup>th</sup> 2013</p>  
+          </form>  
+            <a accesskey="c" href="http://freecatphotoapp.com" >Cat photos</a>
+            <audio id="meowClip" controls>Your browser does not support the
+              <code>audio</code> element.
+              <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg" />
+              
+            </audio>
+            <fieldset>    
+            <footer id="footer">&copy;Copyright Lordicode (Klavdii Maksenkov)</footer>
+                </fieldset>
+          
                
                   <div class="penguin">
                     <div class="penguin-bottom">
