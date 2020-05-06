@@ -12,6 +12,7 @@ a{
 body{
   height: 100%; margin: 0;
 }
+
 button:hover{
   animation: color 4s   infinite  ;
 }
@@ -70,20 +71,6 @@ button:hover{
   height: auto;
   }
 }
-@media ( max-height: 800px )
-{
-   p{
-     font-size: 10px;
-   }
-   h1 h2 h3{
-    font-size: 10px;
-   }
-  img{
-    width: 30px;
-    height: 30px;
-  }
-   
-}
 p{
   z-index: 10;
   background-color: rgba(45, 45, 45, 0.1);
@@ -108,6 +95,121 @@ p{
     border-style: solid;
     border-radius: 50%;
 }
+
+#box-for-flexbox{
+height: auto;
+display: flex;
+flex-direction: row-reverse;
+}
+#box-1{
+  background-color: dodgerblue;
+    height: 200px;
+    order: 2;
+    flex: 0 2 10px;
+}
+#box-2 {
+    background-color: orangered;
+    order: 1;
+    height: 200px;
+    flex: 2 0 10px;
+  }
+
+  #box-for-flexbox-1{
+height: 400px;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+#box-1-1 {
+  background-color: dodgerblue;
+    height: 200px;
+    align-self: center;
+    flex: 0 2 10px;
+}
+#box-2-1 {
+    background-color: orangered;
+    height: 200px;
+    align-self: flex-start;
+    flex: 2 0 10px;
+  }
+  #box-3-1{
+    background-color: rgb(179, 14, 212);
+    height: 200px;
+    align-self: flex-end;
+    flex: 1 1 10px;
+  }
+
+@media screen and (max-width: 700px)
+{
+   p{
+     font-size: 10px;
+   }
+   h1 h2 h3{
+    font-size: 10px;
+   }
+  img{
+    width: 30px;
+    height: 30px;
+  }
+   #box-for-flexbox{
+     height: 80vw;
+     width: 80vw;
+   }
+   #red{
+     height: 6px;
+     width: 6px;
+   }
+   #green{
+     height: 6px;
+     width: 6px;
+   }
+   #blue{
+     height: 6px;
+     width: 6px;
+   }
+
+   .container-2{
+     align-items: end;
+   }
+   
+   #box-1{
+     background-color: cyan !important;
+     flex-grow: 3;
+   }
+   #box-2{
+     background-color: darkgoldenrod !important;
+     flex-shrink: 1;
+   }
+}
+  #traffic-for-flexbox{
+    height: 500px;
+    width: 500px;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    justify-content: space-evenly !important; 
+  }
+  #red-light{
+    background-color: red;
+    width: 33%;
+    height: 33%;
+    border-radius: 50%;
+  }
+  #yellow-light{
+    background-color: yellow;
+    width: 33%;
+    height: 33%;
+    border-radius: 50%;
+  }
+  #green-light{
+    background-color: green;
+    width: 33%;
+    height: 33%;
+    border-radius: 50%;
+  }
+ 
+
 .larger-image{
     width: 30vw;
     height: 30vw;
@@ -126,6 +228,56 @@ p{
   text-transform: uppercase;
   line-height: 12px;
 }
+  .d1{background:LightSkyBlue;
+  grid-row: 1/3;grid-area: header;}
+  .d2{background:LightSalmon;align-self: end;}
+  .d3{background:PaleTurquoise;
+  justify-self: center;grid-area: chapter;}
+  .d4{background:LightPink;
+  grid-column: 3/4;}
+  .d5{background:PaleGreen; display:grid; grid-area: content;grid-template-columns: repeat(2,auto);}
+  .d6{background: rgba(20, 20, 30, 0.3);}
+  .d7{background: rgba(20, 80, 30, 0.3);}
+  .d8{background: rgba(20, 20, 80, 0.8);}
+  .d9{
+    background: rgba(80, 20, 30, 0.3);
+    grid-column: 1/3;
+    grid-area: footer;
+  }
+
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 1fr 50px) 20px;
+    grid-template-rows: repeat (auto-fit, minmax(40px,50px)) !important;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    padding: 10px;
+    grid-template-areas: 
+    "header header header header"
+    "chapter content content content"
+    ". content content content"
+    "footer footer footer footer";
+  }
+
+  .container-2{
+    font-size: 20px;
+    width: 100%;
+    background: rgb(160, 123, 123);
+    display:grid;
+    grid-template-columns: 90px minmax(30px, 200px) 1fr;
+    grid-template-rows: 70px 180px;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "header header header header"
+    "chapter content content content"
+    ". content content content"
+    "footer footer footer footer";
+  }
+
 header{
   position: fixed;
       top: 0px;
@@ -416,12 +568,16 @@ to {transform:scale(1)}
                     .penguin * {
                       position: absolute;
                     }
-                    .balls {
+  .balls {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     border-radius: 50%;
     position: relative;
     width: 50px;
     height: 50px;
-    top: 60%;
+    top: 80%;
+    z-index: 100;
     animation-name: jump;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -429,22 +585,25 @@ to {transform:scale(1)}
   #red {
     background: red;
     left: 25%;
-    position: relative;
-    top: -10px;
+    flex-shrink: 2;
+    z-index: 100;
     animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6);;
   }
   #blue {
     background: blue;
     left: 50%;
+    flex-shrink: 2;
+    z-index: 100;
     animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6);
-    /*top: 700px;*/
     
   }
   #green {
     background: green;
     left: 75%;
+    flex-shrink: 1;
+    z-index: 100;
     animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6);
-    top: -6px;
+    
   }
 
   @keyframes jump {
@@ -702,6 +861,27 @@ to {transform:scale(1)}
                 keyboard. <span class="fat-text">Missing</span> until dinner time toy mouse squeak roll 
                 over. With tail in the air lounge in doorway. Man running 
                 from cops stops to pet cats, goes to jail.</p>
+
+                <div class="container">
+                  <div class="d1">1</div>
+                  <div class="d2">2</div>
+                  <div class="d3">3</div>
+                  <div class="d4">4</div>
+                  <div class="d5">5</div>
+                  <div class="d6">6</div>
+                  <div class="d7">7</div>
+                  <div class="d8">8</div>
+                  <div class="d9">9</div>
+                </div>
+
+                <div class="container-2">
+                  <div class="d1">1</div>
+                  <div class="d2">2</div>
+                  <div class="d3">3</div>
+                  <div class="d4">4</div>
+                  <div class="d5">5</div>
+                </div>
+
                 <article>Hire me
                 <section>Because I know CSS and HTML</section>And because I know other stuff</section></article>
                 <figure>
@@ -793,8 +973,30 @@ to {transform:scale(1)}
             <label for="agressive"><input id="agressive" value="agressive" type="checkbox" name="personality">Agressive</label>
             <label for="scared"><input id="scared" value="scared" type="checkbox" name="personality">Scared</label>
           <p>My cat was born <time datetime="2013-02-13"> on Februrary 13<sup>th</sup> 2013</p>  
-          </form>  
-            <a accesskey="c" href="http://freecatphotoapp.com" >Cat photos</a>
+          </form> 
+          <a accesskey="c" href="http://freecatphotoapp.com" >Cat photos</a>
+          
+          <div id="box-for-flexbox">
+            <div id="box-1"></div>
+            <div id="box-2"></div>
+          </div> 
+
+          <figure>
+            <div id="box-for-flexbox-1">
+            <div id="box-1-1"></div>
+            <div id="box-2-1"></div>
+            <div id="box-3-1"></div>
+          </div>
+          </figure>
+
+          <div id="traffic-for-flexbox">
+            <div id="red-light"></div>
+            <div id="yellow-light"></div>
+            <div id="green-light"></div>
+          </div> 
+</div>
+                     <div class="back"></div>
+                     <div class="heart"></div>
             <audio id="meowClip" controls>Your browser does not support the
               <code>audio</code> element.
               <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg" />
@@ -804,7 +1006,11 @@ to {transform:scale(1)}
             <footer id="footer">&copy;Copyright Lordicode (Klavdii Maksenkov)</footer>
                 </fieldset>
           
-               
+               <div class="wrapper">
+                       <div class="balls" id="red"></div>
+                       <div class="balls" id="blue"></div>
+                     <div class="balls" id="green"></div>
+                  </div>
                   <div class="penguin">
                     <div class="penguin-bottom">
                       <div class="right-hand"></div>
@@ -852,14 +1058,9 @@ to {transform:scale(1)}
                       <div class="beak-top1"></div>
                       <div class="beak-bottom1"></div>
                     </div>
-                  </div>
-                     <div class="back"></div>
-                     <div class="heart"></div>
-                     <div class="balls" id="red"></div>
-                     <div class="wrapper">
-                      <div class="balls" id="blue"></div>
-                     <div class="balls" id="green"></div>
-                  </div>
+                  
+                     
+                     
                      
               </body>
 </html>
